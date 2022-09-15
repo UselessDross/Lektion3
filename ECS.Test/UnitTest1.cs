@@ -9,7 +9,7 @@ namespace ECS.Test
         [SetUp]
         public void Setup()
         {
-            UUT = new(13);
+            UUT = new(13, 20);
         }
 
         [TestCase(4, 4)]
@@ -17,8 +17,8 @@ namespace ECS.Test
         [TestCase(11, 11)]
         public void SetThreshold_TestCorracte(int a, int result)
         {
-            UUT.SetThreshold(a);
-            Assert.That(UUT.GetThreshold(), Is.EqualTo(result));
+            UUT.SetThreshold(a, 20);
+            Assert.That(UUT.GetHeaterThreshold(), Is.EqualTo(result));
         }
 
         [TestCase(3, 2, 3)]
@@ -28,9 +28,10 @@ namespace ECS.Test
         {
             var testheat = new Heater();
             var TestTemp = new DummyTemp(a);
-            ECS.Legacy.ECS UUT = new(b, TestTemp, testheat);
+            var testWindow = new Window();
+            ECS.Legacy.ECS UUT = new(b, 20, TestTemp, testheat, testWindow);
             
-            Assert.That(UUT.Regulate(), Is.EqualTo($"Temperatur measured was {result}Heater is off"));
+            Assert.That(UUT.Regulate(), Is.EqualTo($"Temperatur measured was {result}Heater is offWindow is closed"));
         }
 
         [TestCase(3, 9, 3)]
@@ -40,9 +41,10 @@ namespace ECS.Test
         {
             var testheat = new Heater();
             var TestTemp = new DummyTemp(a);
-            ECS.Legacy.ECS UUT = new(b, TestTemp, testheat);
+            var testWindow = new Window();
+            ECS.Legacy.ECS UUT = new(b, 20, TestTemp, testheat, testWindow);
 
-            Assert.That(UUT.Regulate(), Is.EqualTo($"Temperatur measured was {result}Heater is on"));
+            Assert.That(UUT.Regulate(), Is.EqualTo($"Temperatur measured was {result}Heater is onWindow is closed"));
         }
 
         [TestCase(3, 3)]
@@ -52,7 +54,8 @@ namespace ECS.Test
         {
             var testheat = new Heater();
             var TestTemp = new DummyTemp(a);
-            ECS.Legacy.ECS UUT = new(5, TestTemp, testheat);
+            var testWindow = new Window();
+            ECS.Legacy.ECS UUT = new(5, 20, TestTemp, testheat, testWindow);
             
             Assert.That(UUT.GetCurTemp(), Is.EqualTo(result));
         }
