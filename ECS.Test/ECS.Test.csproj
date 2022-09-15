@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ECS.Legacy\ECS.Legacy.csproj" />
+    <ProjectReference Include="..\ECS.Redesign\ECS.Redesign.csproj" />
   </ItemGroup>
 
 </Project>

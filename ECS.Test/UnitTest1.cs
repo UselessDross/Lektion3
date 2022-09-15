@@ -7,7 +7,7 @@ namespace ECS.Test
         [SetUp]
         public void Setup()
         {
-           
+            ECS UUT = new ECS();
         }
 
         [Test]
