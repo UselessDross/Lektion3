@@ -15,14 +15,14 @@ namespace ECS.Legacy
             _heater = new Heater();
         }
 
-        public void Regulate()
+        public string Regulate()
         {
             var t = _tempSensor.GetTemp();
-            Console.WriteLine($"Temperatur measured was {t}");
             if (t < _threshold)
                 _heater.TurnOn();
             else
                 _heater.TurnOff();
+            return $"Temperatur measured was {t}";
 
         }
 
