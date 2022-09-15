@@ -1,13 +1,20 @@
-﻿using ECS.Redesign;
-using System;
+﻿using System;
+using System.Text;
 
 namespace ECS.Legacy
 {
     public class ECS
     {
         private int _threshold;
-        private readonly TempSensor _tempSensor;
-        private readonly Heater _heater;
+        private readonly ITempSensor _tempSensor;
+        private readonly IHeater _heater;
+
+        public ECS(int thr, ITempSensor tempSensor, IHeater heater)
+        {
+            SetThreshold(thr);
+            _tempSensor = tempSensor;
+            _heater = heater;
+        }
 
         public ECS(int thr)
         {
@@ -16,15 +23,15 @@ namespace ECS.Legacy
             _heater = new Heater();
         }
 
-        public void Regulate()
+        public string Regulate()
         {
             var t = _tempSensor.GetTemp();
-            Console.WriteLine($"Temperatur measured was {t}");
+            StringBuilder sb = new StringBuilder($"Temperatur measured was {t}");
             if (t < _threshold)
-                _heater.TurnOn();
+                sb.Append(_heater.TurnOn());
             else
-                _heater.TurnOff();
-
+                sb.Append(_heater.TurnOff());
+            return sb.ToString();
         }
 
         public void SetThreshold(int thr)
@@ -40,11 +47,6 @@ namespace ECS.Legacy
         public int GetCurTemp()
         {
             return _tempSensor.GetTemp();
-        }
-
-        public bool RunSelfTest()
-        {
-            return _tempSensor.RunSelfTest() && _heater.RunSelfTest();
         }
     }
 }

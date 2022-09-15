@@ -1,25 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="ECS.Redesign.ECS">
+  <Class Name="ECS.Legacy.ECS">
     <Position X="5.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAABAAAAAAAAAIAAAAAAAACBAAAAAAAgCAAAAIAA=</HashCode>
       <FileName>ECS.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ECS.Redesign.TempSensor">
-    <Position X="7.5" Y="0.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAACAAAAAQAAAAABAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>TempSensor.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="ECS.Redesign.Heater">
+  <Class Name="ECS.Legacy.Heater">
     <Position X="7.5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAA=</HashCode>
       <FileName>Heater.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ECS.Legacy.TempSensor">
+    <Position X="7.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAQAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TempSensor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
