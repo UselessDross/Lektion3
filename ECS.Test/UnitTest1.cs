@@ -1,3 +1,5 @@
+using ECS.Legacy;
+using System;
 namespace ECS.Test
 {
     public class Tests
@@ -5,6 +7,7 @@ namespace ECS.Test
         [SetUp]
         public void Setup()
         {
+           
         }
 
         [Test]
