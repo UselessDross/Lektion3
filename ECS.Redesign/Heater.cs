@@ -2,19 +2,16 @@
 {
     public class Heater : IHeater
     {
-        public void TurnOn()
+        public string TurnOn()
         {
-            System.Console.WriteLine("Heater is on");
+            return "Heater is on";
         }
 
-        public void TurnOff()
+        public string TurnOff()
         {
-            System.Console.WriteLine("Heater is off");
+            return "Heater is off";
         }
 
-        public bool RunSelfTest()
-        {
-            return true;
-        }
+     
     }
 }

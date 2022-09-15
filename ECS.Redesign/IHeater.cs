@@ -3,8 +3,8 @@ namespace ECS.Legacy
 {
     public interface IHeater
     {
-        public void TurnOn();
-        public void TurnOff();
-        public bool RunSelfTest();
+        public string TurnOn();
+        public string TurnOff();
+       
     }
 }
