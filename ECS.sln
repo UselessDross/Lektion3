@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECS.Legacy", "ECS.Legacy\EC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECS.Redesign", "ECS.Redesign\ECS.Redesign.csproj", "{56D5D531-B150-447B-A374-DEE54BA7EE17}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECS.Test", "ECS.Test\ECS.Test.csproj", "{923432F1-490B-4935-8E02-38F0B18B6921}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{56D5D531-B150-447B-A374-DEE54BA7EE17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56D5D531-B150-447B-A374-DEE54BA7EE17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56D5D531-B150-447B-A374-DEE54BA7EE17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{923432F1-490B-4935-8E02-38F0B18B6921}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{923432F1-490B-4935-8E02-38F0B18B6921}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{923432F1-490B-4935-8E02-38F0B18B6921}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{923432F1-490B-4935-8E02-38F0B18B6921}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
