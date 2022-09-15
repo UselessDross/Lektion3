@@ -1,24 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ECS.Redesign
+﻿namespace ECS.Legacy
 {
     public class Heater
     {
         public void TurnOn()
         {
-            throw new System.NotImplementedException();
+            System.Console.WriteLine("Heater is on");
         }
 
         public void TurnOff()
         {
-            throw new System.NotImplementedException();
+            System.Console.WriteLine("Heater is off");
         }
 
-        public void RunSelfTest()
+        public bool RunSelfTest()
         {
-            throw new System.NotImplementedException();
+            return true;
         }
     }
 }

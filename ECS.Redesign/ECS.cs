@@ -1,38 +1,50 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using ECS.Redesign;
+using System;
 
-namespace ECS.Redesign
+namespace ECS.Legacy
 {
     public class ECS
     {
         private int _threshold;
-        private TempSensor _tempSensor;
-        private Heater _heater;
+        private readonly TempSensor _tempSensor;
+        private readonly Heater _heater;
+
+        public ECS(int thr)
+        {
+            SetThreshold(thr);
+            _tempSensor = new TempSensor();
+            _heater = new Heater();
+        }
 
         public void Regulate()
         {
-            throw new System.NotImplementedException();
+            var t = _tempSensor.GetTemp();
+            Console.WriteLine($"Temperatur measured was {t}");
+            if (t < _threshold)
+                _heater.TurnOn();
+            else
+                _heater.TurnOff();
+
         }
 
         public void SetThreshold(int thr)
         {
-            throw new System.NotImplementedException();
+            _threshold = thr;
         }
 
         public int GetThreshold()
         {
-            throw new System.NotImplementedException();
+            return _threshold;
         }
 
         public int GetCurTemp()
         {
-            throw new System.NotImplementedException();
+            return _tempSensor.GetTemp();
         }
 
         public bool RunSelfTest()
         {
-            throw new System.NotImplementedException();
+            return _tempSensor.RunSelfTest() && _heater.RunSelfTest();
         }
     }
 }

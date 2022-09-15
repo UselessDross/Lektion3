@@ -1,21 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace ECS.Redesign
+namespace ECS.Legacy
 {
-    public class TempSensor
+    internal class TempSensor
     {
-        private System.Random gen;
+        private Random gen = new Random();
 
         public int GetTemp()
         {
-            throw new System.NotImplementedException();
+            return gen.Next(-5, 45);
         }
 
         public bool RunSelfTest()
         {
-            throw new System.NotImplementedException();
+            return true;
         }
     }
 }
