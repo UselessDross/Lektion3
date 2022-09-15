@@ -3,14 +3,14 @@
   <Class Name="ECS.Legacy.ECS">
     <Position X="5.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAABAAAAAAAAAIAAAAAAAACBAAAAAAAgCAAAAIAA=</HashCode>
+      <HashCode>AAAAAABAAhAAAAAAICAAAAAAACBAAAAAAAAAAAAAIAA=</HashCode>
       <FileName>ECS.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ECS.Legacy.Heater">
     <Position X="7.5" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAA=</HashCode>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
       <FileName>Heater.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -18,8 +18,16 @@
   <Class Name="ECS.Legacy.TempSensor">
     <Position X="7.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAACAAAAAQAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAACAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>TempSensor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ECS.Legacy.Window">
+    <Position X="7.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Window.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
