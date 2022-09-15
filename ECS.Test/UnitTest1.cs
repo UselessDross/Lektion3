@@ -31,7 +31,7 @@ namespace ECS.Test
             var testWindow = new Window();
             ECS.Legacy.ECS UUT = new(b, 20, TestTemp, testheat, testWindow);
             
-            Assert.That(UUT.Regulate(), Is.EqualTo($"Temperatur measured was {result}Heater is offWindow is closed"));
+            Assert.That(UUT.Regulate(), Is.EqualTo($"Temperatur measured was {result}\r\nHeater is off\r\nWindow is closed\r\n"));
         }
 
         [TestCase(3, 9, 3)]
@@ -44,7 +44,7 @@ namespace ECS.Test
             var testWindow = new Window();
             ECS.Legacy.ECS UUT = new(b, 20, TestTemp, testheat, testWindow);
 
-            Assert.That(UUT.Regulate(), Is.EqualTo($"Temperatur measured was {result}Heater is onWindow is closed"));
+            Assert.That(UUT.Regulate(), Is.EqualTo($"Temperatur measured was {result}\r\nHeater is on\r\nWindow is closed\r\n"));
         }
 
         [TestCase(3, 3)]

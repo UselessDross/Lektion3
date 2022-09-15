@@ -24,21 +24,21 @@ namespace ECS.Legacy
         public string Regulate()
         {
             var t = _tempSensor.GetTemp();
-            StringBuilder sb = new StringBuilder($"Temperatur measured was {t}");
+            StringBuilder sb = new StringBuilder($"Temperatur measured was {t}\r\n");
             if (t < _heaterThreshold)
             {
-                sb.Append(_heater.TurnOn());
-                sb.Append(_window.Close());
+                sb.AppendLine(_heater.TurnOn());
+                sb.AppendLine(_window.Close());
             }
             else if (t < _windowThreshold)
             {
-                sb.Append(_heater.TurnOff());
-                sb.Append(_window.Close());
+                sb.AppendLine(_heater.TurnOff());
+                sb.AppendLine(_window.Close());
             }
             else
             {
-                sb.Append(_heater.TurnOff());
-                sb.Append(_window.Open());
+                sb.AppendLine(_heater.TurnOff());
+                sb.AppendLine(_window.Open());
             }
             return sb.ToString();
         }
